@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/NARMALDY/Scenes/Main menu.unity
+  isLoaded: 1
+  isActive: 1
