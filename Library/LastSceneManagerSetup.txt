@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/NARMALDY/Scenes/Main menu.unity
+- path: Assets/NARMALDY/Scenes/Tutorial.unity
   isLoaded: 1
   isActive: 1

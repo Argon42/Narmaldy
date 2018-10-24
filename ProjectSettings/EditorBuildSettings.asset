@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/NARMALDY/Scenes/Main menu.unity
+    guid: 11a8713f0b815dd4abbbda2514753cf1
+  - enabled: 1
+    path: Assets/NARMALDY/Scenes/Tutorial.unity
+    guid: 33a89d047780cd644a996f22a41dd9d7
+  - enabled: 1
+    path: Assets/NARMALDY/Scenes/Default Level.unity
+    guid: df8d292fd3a43b5448c0e1316ece9d88
