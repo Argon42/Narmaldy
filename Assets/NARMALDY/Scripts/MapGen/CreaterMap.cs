@@ -17,7 +17,9 @@ public class CreaterMap : MonoBehaviour{
 
     public void Gen()
     {
-        seed++;
+        ColMap.ClearAllTiles();
+        FloorMap.ClearAllTiles();
+        //seed++;
         MapGenerator1 generator1 = new MapGenerator1();
         generator1.SetGeneratorSettings(LevelLength, LevelHeight, MaxWidthRoomInLevel, MaxHightRoomInLevel,(int)seed);
         generator1.Gen(FloorMap, FloorTile);

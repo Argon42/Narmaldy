@@ -12,36 +12,37 @@ public class ControllerPlayer : MonoBehaviour {
         Anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
-	
-    private void ChooseDir(float H, float V)
+
+    private int ChooseDir(float H, float V)
     {
         if (H == 0)
         {
             if (V > 0)
-                Anim.Play("Walk0");
+                return 0;
             else if (V < 0)
-                Anim.Play("Walk4");
+                return 4;
             else
-                Anim.Play("Stand");
+                return -1;
         }
         else if (H > 0)
         {
             if (V > 0)
-                Anim.Play("Walk1");
+                return 1;
             else if (V < 0)
-                Anim.Play("Walk3");
+                return 3;
             else
-                Anim.Play("Walk2");
+                return 2;
         }
         else if (H < 0)
         {
             if (V > 0)
-                Anim.Play("Walk7");
+                return 7;
             else if (V < 0)
-                Anim.Play("Walk5");
+                return 5;
             else
-                Anim.Play("Walk6");
+                return 6;
         }
+        return -1;
     }
 
 
@@ -50,7 +51,7 @@ public class ControllerPlayer : MonoBehaviour {
     {
         float H = Input.GetAxis("Horizontal"),
             V = Input.GetAxis("Vertical");
-        ChooseDir(H, V);
+        Anim.SetInteger("Dir",ChooseDir(H, V));
 
         rb.MovePosition(new Vector2(
             transform.position.x + Input.GetAxis("Horizontal") * SpeedPlayer * Time.deltaTime,
