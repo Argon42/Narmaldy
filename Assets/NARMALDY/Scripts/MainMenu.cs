@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour {
     [SerializeField] private GameObject MainPanel;
     [SerializeField] private GameObject OptionsPanel;
     [SerializeField] private GameObject AutorsPanel;
+    [SerializeField] private GameObject Bomj;
 
     private void Awake()
     {
@@ -30,6 +31,12 @@ public class MainMenu : MonoBehaviour {
 
     public void NewGame()
     {
+        StartCoroutine(TimerForStart());
+    }
+    IEnumerator TimerForStart()
+    {
+        //Bomj.GetComponent<Animator>().Play("StartNewGame");
+        yield return new WaitForSeconds(5);
         SceneManager.LoadScene("Tutorial");
     }
 
