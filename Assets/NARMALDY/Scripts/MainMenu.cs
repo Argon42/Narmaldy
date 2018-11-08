@@ -35,8 +35,9 @@ public class MainMenu : MonoBehaviour {
     }
     IEnumerator TimerForStart()
     {
-        //Bomj.GetComponent<Animator>().Play("StartNewGame");
-        yield return new WaitForSeconds(5);
+        Bomj.GetComponent<Animator>().Play("StartNewGame");
+        MainPanel.SetActive(false);
+        yield return new WaitForSeconds(6);
         SceneManager.LoadScene("Tutorial");
     }
 
