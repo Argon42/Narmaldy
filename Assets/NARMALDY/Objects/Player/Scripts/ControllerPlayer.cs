@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Narmaldy;
 
-public class ControllerPlayer : MonoBehaviour {
+public class ControllerPlayer : Entity {
 
     Animator Anim;
     Rigidbody2D rb;
-    [SerializeField] public float SpeedPlayer;
     
 	void Start () {
         Anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        Heals = 200;
+        Speed = 1;
     }
 
     private int ChooseDir(float H, float V)
@@ -54,8 +56,8 @@ public class ControllerPlayer : MonoBehaviour {
         Anim.SetInteger("Dir",ChooseDir(H, V));
 
         rb.MovePosition(new Vector2(
-            transform.position.x + Input.GetAxis("Horizontal") * SpeedPlayer * Time.deltaTime,
-            transform.position.y + Input.GetAxis("Vertical") * SpeedPlayer * Time.deltaTime));
+            transform.position.x + Input.GetAxis("Horizontal") * Speed * Time.deltaTime,
+            transform.position.y + Input.GetAxis("Vertical") * Speed * Time.deltaTime));
         //transform.position = new Vector2(
         //    transform.position.x + Input.GetAxis("Horizontal") * SpeedPlayer * Time.deltaTime,
         //    transform.position.y + Input.GetAxis("Vertical") * SpeedPlayer * Time.deltaTime);

@@ -6,9 +6,30 @@ namespace Narmaldy
 {
     public abstract class Entity : MonoBehaviour
     {
-        public int Heals { get; set; } 
-        public int Mana { get; set; }
-        public float Speed { get; set; }
+        private int _HP;
+
+        public virtual int Mana { get; set; }
+        public virtual float Speed { get; set; }
+        public int Heals
+        {
+            get
+            {
+                return _HP;
+            }
+
+            set
+            {
+                _HP = value;
+                if (_HP <= 0)
+                    Death();
+            }
+        }
+
+        public virtual void Death()
+        {
+            Debug.Log("Death");
+            Destroy(gameObject);
+        }
     }
 
     public class Player : Entity
