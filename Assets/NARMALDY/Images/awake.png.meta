@@ -92,7 +92,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 8
-        width: 35
+        width: 37
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -130,12 +130,12 @@ TextureImporter:
       name: awake_2
       rect:
         serializedVersion: 2
-        x: 61
+        x: 56
         y: 6
-        width: 27
+        width: 34
         height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.7176206, y: 0.4940209}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

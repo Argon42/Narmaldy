@@ -285,6 +285,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="UnityEditor.StandardEvents.csproj">
+      <Project>{6800202F-4402-D405-F8CB-03DC7BD78B92}</Project>
+      <Name>UnityEditor.StandardEvents</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{3A848AB7-9891-EDDA-D555-BF184C2F81F4}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
@@ -297,14 +301,12 @@
       <Project>{07A21C90-D344-AE1A-8456-9910C203B41A}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEditor.StandardEvents.csproj">
-      <Project>{6800202F-4402-D405-F8CB-03DC7BD78B92}</Project>
-      <Name>UnityEditor.StandardEvents</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\NARMALDY\Objects\Enemys\Rat\Scripts\AIrat.cs" />
+    <Compile Include="Assets\NARMALDY\Objects\Enemys\Rat\Scripts\AIratV2.cs" />
     <Compile Include="Assets\NARMALDY\Objects\Player\Scripts\ControllerPlayer.cs" />
+    <Compile Include="Assets\NARMALDY\Scripts\IEntity.cs" />
     <Compile Include="Assets\NARMALDY\Scripts\MainMenu.cs" />
     <Compile Include="Assets\NARMALDY\Scripts\MapGen\CreaterMap.cs" />
     <Compile Include="Assets\NARMALDY\Scripts\MapGen\MapGenerator1.cs" />
